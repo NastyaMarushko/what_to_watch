@@ -1,11 +1,10 @@
 # what_to_watch/opinions_app/__init__.py
 
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from .settings import Config
+from settings import Config
 
 # Создаем экземпляры расширений БЕЗ передачи app
 db = SQLAlchemy()
@@ -33,6 +32,8 @@ def create_app():
 
     return app
 
+
+app = create_app()
 
 if __name__ == '__main__':
     app = create_app()
