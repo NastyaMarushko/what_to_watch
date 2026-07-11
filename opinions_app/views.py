@@ -1,5 +1,6 @@
 # what_to_watch/opinions_app/views.py
 from random import randrange
+
 from flask import Blueprint, abort, flash, redirect, render_template, url_for
 
 from .models import Opinion
@@ -26,7 +27,7 @@ def add_opinion_view():
         text = form.text.data
         if Opinion.query.filter_by(text=text).first() is not None:
             flash('Такое мнение уже было оставлено ранее!')
-            return render_template('add_opinion.html', form=form)  
+            return render_template('add_opinion.html', form=form)
         opinion = Opinion(
             title=form.title.data,
             text=text,

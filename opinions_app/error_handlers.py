@@ -1,6 +1,7 @@
 # what_to_watch/opinions_app/error_handlers.py
 
 from flask import render_template
+
 from . import db
 
 

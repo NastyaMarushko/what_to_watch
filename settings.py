@@ -1,6 +1,7 @@
 # what_to_watch/settings.py
 
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
